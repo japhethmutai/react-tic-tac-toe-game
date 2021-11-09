@@ -16,6 +16,10 @@ body {
   min-height: 100vh;
   padding: 2rem;
 }
+.header {
+  width: 100%;
+  text-align: center;
+}
 
 h1 {
   margin: 2rem;
@@ -26,6 +30,7 @@ h1 {
   background: #ff652f;
   width: 500px;
   height: 500px;
+  margin: auto;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 1rem;
@@ -68,4 +73,12 @@ li {
   cursor: pointer;
   padding: 0.5rem;
   margin: 0.5rem 1rem;
+}
+
+@media (min-width:320px)  { 
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .board {
+    width: 350px;
+    height: 350px;
+  }
 }
