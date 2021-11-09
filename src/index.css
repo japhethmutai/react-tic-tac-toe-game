@@ -25,6 +25,10 @@ h1 {
   margin: 2rem;
 }
 
+p {
+  margin: 2rem;
+}
+
 .board {
   border: 1rem solid #ff652f;
   background: #ff652f;

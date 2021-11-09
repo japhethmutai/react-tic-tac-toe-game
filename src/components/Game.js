@@ -41,6 +41,7 @@ const Game = () => {
     <>
       <div className="header">
         <h1>Tic Tac Toe</h1>
+        <p>Click on any box to start playing...</p>
       </div>
       <Board squares={history[stepNumber]} onClick={handleClick} />
       <div className="info-wrapper">
