@@ -28,8 +28,6 @@ h1 {
 .board {
   border: 1rem solid #ff652f;
   background: #ff652f;
-  width: 500px;
-  height: 500px;
   margin: auto;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
@@ -80,5 +78,13 @@ li {
   .board {
     width: 350px;
     height: 350px;
+  }
+}
+
+@media (min-width:961px)  { 
+  /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+  .board {
+    width: 500px;
+    height: 500px;
   }
 }
