@@ -18,6 +18,7 @@ const Game = () => {
     if (winner || squares[i]) return;
     // select square
     squares[i] = xO;
+    console.log(stepNumber);
     setHistory([...historyPoint, squares]);
     setStepNumber(historyPoint.length);
     setXisNext(!xIsNext);
@@ -38,6 +39,8 @@ const Game = () => {
       );
     });
 
+    const nextPlayer = stepNumber < 9 ? "Next Player: " + xO : "No Winner! Start Again";
+
   return (
     <>
       <div className="header">
@@ -50,7 +53,7 @@ const Game = () => {
           <h3>History</h3>
           {renderMoves()}
         </div>
-        <h3>{winner ? "Winner: " + winner : "Next Player: " + xO}</h3>
+        <h3>{winner ? "Winner: " + winner : nextPlayer}</h3>
       </div>
     </>
   );
