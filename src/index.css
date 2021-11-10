@@ -47,11 +47,15 @@ p {
   outline: none;
 }
 
+.winner {
+  background: green;
+}
+
 .X {
   color: red;
 }
 .O {
-  color: green;
+  color: orange;
 }
 
 .info-wrapper {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { calculateWinner } from "../helper";
+import { calculateWinner, obtainWinnerSquares } from "../helper";
 import Board from "./Board";
 
 const Game = () => {
@@ -7,6 +7,7 @@ const Game = () => {
   const [stepNumber, setStepNumber] = useState(0);
   const [xIsNext, setXisNext] = useState(true);
   const winner = calculateWinner(history[stepNumber]);
+  const winnerSquares = obtainWinnerSquares(history[stepNumber]);
   const xO = xIsNext ? "X" : "O";
 
   const handleClick = (i) => {
@@ -43,7 +44,7 @@ const Game = () => {
         <h1>Tic Tac Toe</h1>
         <p>Click on any box to start playing...</p>
       </div>
-      <Board squares={history[stepNumber]} onClick={handleClick} />
+      <Board squares={history[stepNumber]} onClick={handleClick} winnerSquares={winnerSquares} />
       <div className="info-wrapper">
         <div>
           <h3>History</h3>
