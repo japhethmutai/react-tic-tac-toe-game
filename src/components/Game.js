@@ -18,7 +18,6 @@ const Game = () => {
     if (winner || squares[i]) return;
     // select square
     squares[i] = xO;
-    console.log(stepNumber);
     setHistory([...historyPoint, squares]);
     setStepNumber(historyPoint.length);
     setXisNext(!xIsNext);
@@ -45,7 +44,7 @@ const Game = () => {
     <>
       <div className="header">
         <h1>Tic Tac Toe</h1>
-        <p>Click on any box to start playing...</p>
+        <p>{winner ? "Congratulations " + winner + "! You won! 😃" : "Click on any box to start playing..."}</p>
       </div>
       <Board squares={history[stepNumber]} onClick={handleClick} winnerSquares={winnerSquares} />
       <div className="info-wrapper">
